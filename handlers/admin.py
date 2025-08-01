@@ -54,7 +54,9 @@ async def all_bookings_admin(update: Update, context: ContextTypes.DEFAULT_TYPE)
             parts.append(f"  {time} — {user_disp}")
         parts.append("")  # порожній рядок між датами
 
-    await update.message.reply_text("\n".join(parts).rstrip())
+    target = update.message or update.callback_query.message
+    await target.reply_text("\n".join(parts).rstrip())
+
 
 
 # ───────────── /user_bookings  (quick picker) ────────────────
