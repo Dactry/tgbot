@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Secrets
+.env
+
+# Data files
+*.json
+!*.example.json  # якщо хочеш залишити шаблон
+
+# Archives
+*.zip
+
+# VSCode settings (опційно)
+.vscode/
